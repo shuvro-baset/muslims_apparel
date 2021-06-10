@@ -15,3 +15,14 @@ def home(request):
         'sliders': slider_ins,
     }
     return render(request, 'home.html', context)
+
+class ProductView(TemplateView):
+    template_name = 'product.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        category = self.request.GET.get('category')
+        print(category)
+        context['products'] = Product.objects.filter(category=category).all()
+        print(context['products'])
+        return context

@@ -6,7 +6,7 @@ class Slider(models.Model):
 
 class Product(models.Model):
     CATEGORY = (
-        ('NEW ARRIVALS', 'N ARRIVALS'),
+        ('NEW ARRIVALS', 'NEW ARRIVALS'),
         ('ORGANIC FOOD', 'ORGANIC FOOD'),
         ('BEST SELLING PRODUCTS', 'BEST SELLING PRODUCTS'),
         ('TOP RATED PRODUCTS', 'TOP RATED PRODUCTS'),
@@ -25,5 +25,5 @@ class Product(models.Model):
     description = models.CharField(max_length=200)
     pro_img = models.ImageField(upload_to='product_images')
     price = models.CharField(max_length=10)
-    updated_price = models.CharField(max_length=10)
+    updated_price = models.CharField(max_length=10, blank=True, null=True)
     category = models.CharField(max_length=200, choices=CATEGORY, default=CATEGORY[0])
