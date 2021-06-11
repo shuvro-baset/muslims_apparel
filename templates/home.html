@@ -116,7 +116,9 @@
                     <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="card">
                             <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                            <input type="button" value="Buy Now">
+                            <a href="{% url 'single_product' product.id %}"><input type="button" value="product details"></a>
+
+
                             <h5>{{ product.name }}</h5>
                             {% if product.updated_price %}
                                 <p><small>
@@ -223,7 +225,8 @@
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <input type="button" value="Buy Now">
+                                <a href="{% url 'single_product' product.id %}"><input type="button" value="product details"></a>
+
                                 <h5>{{ product.name }}</h5>
                                 {% if product.updated_price %}
                                     <p><small>
@@ -329,7 +332,9 @@
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <input type="button" value="Buy Now">
+                                <a href="{% url 'single_product' product.id %}"><input type="button" value="product details"></a>
+
+
                                 <h5>{{ product.name }}</h5>
                                 {% if product.updated_price %}
                                     <p><small>
@@ -442,7 +447,9 @@
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <input type="button" value="Buy Now">
+                                <a href="{% url 'single_product' product.id %}"><input type="button" value="product details"></a>
+
+
                                 <h5>{{ product.name }}</h5>
                                 {% if product.updated_price %}
                                     <p><small>

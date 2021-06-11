@@ -25,4 +25,17 @@ class ProductView(TemplateView):
         print(category)
         context['products'] = Product.objects.filter(category=category).all()
         print(context['products'])
+        context['category'] = category
+        return context
+
+
+class SinglepProductView(TemplateView):
+    template_name = 'product-single.html'
+
+    def get_context_data(self, product_id, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        print('product_id ', product_id)
+        context['product'] = Product.objects.filter(id=product_id).first()
+        print(context['product'])
         return context
