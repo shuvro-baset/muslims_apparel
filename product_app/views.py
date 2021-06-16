@@ -1,14 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
-# Create your views here.
-# class HomeView(TemplateView):
-#     template_name = 'home.html'
 
-
+# todo: render home page and showing few types of product and also slider images from backend.
 def home(request):
+    # fetch all slider images from slide model
     slider_ins = Slider.objects.all().order_by('-id')
-    print(slider_ins)
+    # fetch all products instances from product model
     product_ins = Product.objects.all().order_by('-id')
     context = {
         'products': product_ins,
@@ -16,26 +14,26 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
+# todo: all product view
 class ProductView(TemplateView):
     template_name = 'product.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        # taking category from request
         category = self.request.GET.get('category')
-        print(category)
+        # taking all products based on category using filter method
         context['products'] = Product.objects.filter(category=category).all()
-        print(context['products'])
+        # appending another value into context data
         context['category'] = category
         return context
 
-
+# todo: single product view
 class SinglepProductView(TemplateView):
     template_name = 'product-single.html'
 
     def get_context_data(self, product_id, **kwargs):
         context = super().get_context_data(**kwargs)
-
-        print('product_id ', product_id)
+        # filtering product using product id
         context['product'] = Product.objects.filter(id=product_id).first()
-        print(context['product'])
         return context
