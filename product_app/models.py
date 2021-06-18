@@ -27,3 +27,7 @@ class Product(models.Model):
     price = models.CharField(max_length=10)
     updated_price = models.CharField(max_length=10, blank=True, null=True)
     category = models.CharField(max_length=200, choices=CATEGORY, default=CATEGORY[0])
+
+    def delete(self, using=None, keep_parents=False):
+        self.pro_img.storage.delete(self.pro_img.path)
+        super().delete()
