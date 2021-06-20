@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
+# import paginator classes
+from django.core.paginator import Paginator
+
+
 
 # todo: render home page and showing few types of product and also slider images from backend.
 def home(request):
@@ -36,6 +40,13 @@ class ProductView(TemplateView):
         context['products'] = Product.objects.filter(category=category).all()
         # appending another value into context data
         context['category'] = category
+
+        paginator = Paginator(context['products'], 10)  # Show 25 contacts per page.
+        page_number = self.request.GET.get("page")
+        page_obj = paginator.get_page(page_number)
+
+        context['page_obj'] = page_obj
+
         return context
 
 # todo: single product view
