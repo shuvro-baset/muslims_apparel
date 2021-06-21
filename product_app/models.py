@@ -1,8 +1,11 @@
 from django.db import models
 
+from django.utils.safestring import mark_safe
+from django.utils.translation import ugettext_lazy as _
+
 # Create your models here.
 class Slider(models.Model):
-    img = models.ImageField(upload_to='slider_images')
+    img = models.ImageField(upload_to='slider_images', help_text=mark_safe('<h2 style="color: #008CBA;">Images size must be height: 1200px and width: 1486px format.</h2>'))  # size must be ato ato pixel)
 
 class Product(models.Model):
     CATEGORY = (
@@ -23,7 +26,7 @@ class Product(models.Model):
     )
     name = models.CharField(max_length=20)
     description = models.CharField(max_length=200)
-    pro_img = models.ImageField(upload_to='product_images')
+    pro_img = models.ImageField(upload_to='product_images', help_text=mark_safe('<h2 style="color: #008CBA;">Images size must be height: 1200px and width: 1486px format.</h2>'))  # size must be ato ato pixel)
     price = models.CharField(max_length=10)
     updated_price = models.CharField(max_length=10, blank=True, null=True)
     category = models.CharField(max_length=200, choices=CATEGORY, default=CATEGORY[0])
