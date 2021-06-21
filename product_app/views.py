@@ -41,7 +41,7 @@ class ProductView(TemplateView):
         # appending another value into context data
         context['category'] = category
 
-        paginator = Paginator(context['products'], 10)  # Show 25 contacts per page.
+        paginator = Paginator(context['products'], 2)  # Show 25 contacts per page.
         page_number = self.request.GET.get("page")
         page_obj = paginator.get_page(page_number)
 

@@ -37,24 +37,25 @@
     </section>
 
     <!--product end -->
-    <div class="pagination container">
-		<span class="step-links">
-			{% if page_obj.has_previous %}
-                <a href="?page=1" class="first">&laquo; first</a>
-                <a href="?page={{ page_obj.previous_page_number }}" class="previous">previous</a>
+<div class="pagination container">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination ">
+            {% if page_obj.has_previous %}
+            <li class="page-item"><a href="?page=1" class="page-link first">&laquo; first</a></li>
+            <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}" class="page-link previous">previous</a></li>
             {% endif %}
 
-            <span class="current">
-				<span class="page">Page</span> <span>{{ page_obj.number }}</span> <span
-                    class="page">of</span> <span>{{ page_obj.paginator.num_pages }}</span>
-			</span>
+            <li class="page-item">
+            <span class="page-link bg-dark">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+            </li>
 
             {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}" class="next">next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}" class="last">last &raquo;</a>
+                <li class="page-item"><a href="?page={{ page_obj.next_page_number }}" class="page-link">next</a></li>
+                <li class="page-item "><a href="?page={{ page_obj.paginator.num_pages }}" class="page-link bg-danger">last &raquo;</a></li>
             {% endif %}
-		</span>
-    </div>
+        </ul>
+    </nav>
+</div>
 
 
 {% endblock %}
