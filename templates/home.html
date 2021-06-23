@@ -52,91 +52,127 @@
 
 
     <!--Service Section==========-->
-	<section class="services py-5 text-center" id="service-section">
-		<div class="container">
-			<h4 class="section-header">OUR SERVICES</h4>
-			<div class="row wow slideInLeft" data-wow-duration="4s">
-				<!--Single Service-->
-				<div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
+    <section class="services py-5 text-center" id="service-section">
+        <div class="container">
+            <h4 class="section-header">OUR SERVICES</h4>
+            <div class="row wow slideInLeft" data-wow-duration="4s">
+                <!--Single Service-->
+                <div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
 					<span class="service-icon ">
 						<i class="fas fa-ambulance fa-2x"></i>
 					</span>
-					<h5 class="font-weight-bold text-uppercase">CASH ON DELIVERY</h5>
-					<p class="text-capitalize">CASH ON DELIVERY INSIDE DHAKA CITY CORPORATION</p>
-				</div>
-				<!--end of Service=-->
-				<!--Single Service-->
-				<div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
+                    <h5 class="font-weight-bold text-uppercase">CASH ON DELIVERY</h5>
+                    <p class="text-capitalize">CASH ON DELIVERY INSIDE DHAKA CITY CORPORATION</p>
+                </div>
+                <!--end of Service=-->
+                <!--Single Service-->
+                <div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
 					<span class="service-icon">
 						<i class="fas fa-headset fa-2x"></i>
 					</span>
-					<h5 class="font-weight-bold text-uppercase">CUSTOMER SERVICE</h5>
-					<p class="text-capitalize">24/7 DEDICATED CUSTOMER SERVICE AGENT</p>
-				</div>
-				<!--end of Service=-->
-				<!--Single Service-->
-				<div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
+                    <h5 class="font-weight-bold text-uppercase">CUSTOMER SERVICE</h5>
+                    <p class="text-capitalize">24/7 DEDICATED CUSTOMER SERVICE AGENT</p>
+                </div>
+                <!--end of Service=-->
+                <!--Single Service-->
+                <div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
 					<span class="service-icon">
 						<i class="fas fa-shield-alt fa-2x"></i>
 					</span>
-					<h5 class="font-weight-bold text-uppercase">SECURE PAYMENT</h5>
-					<p class="text-capitalize">100% SECURE PAYMENT PROCESS & NO HIDDEN CHARGE</p>
-				</div>
-				<!--end of Service=-->
-				<!--Single Service-->
-				<div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
+                    <h5 class="font-weight-bold text-uppercase">SECURE PAYMENT</h5>
+                    <p class="text-capitalize">100% SECURE PAYMENT PROCESS & NO HIDDEN CHARGE</p>
+                </div>
+                <!--end of Service=-->
+                <!--Single Service-->
+                <div class="col-10 mx-auto col-md-6 col-lg-3 my-3">
 					<span class="service-icon">
 						<i class="fas fa-exchange-alt fa-2x"></i>
 					</span>
-					<h5 class="font-weight-bold text-uppercase">RETURN POLICY</h5>
-					<p class="text-capitalize">YOU CAN RETURN ANY PRODUCT WITHIN 3 DAYS OF PURCHASE</p>
-				</div>
-				<!--end of Service=-->
-			</div>
-		</div>
-	</section>
-	<!---End of Service Section=======-->
+                    <h5 class="font-weight-bold text-uppercase">RETURN POLICY</h5>
+                    <p class="text-capitalize">YOU CAN RETURN ANY PRODUCT WITHIN 3 DAYS OF PURCHASE</p>
+                </div>
+                <!--end of Service=-->
+            </div>
+        </div>
+    </section>
+    <!---End of Service Section=======-->
 
 
 
 
     <!-- new arrival start -->
 
+    {#    <section class="collection">#}
+    {#        <div class="container py-5">#}
+    {#            <h4 class="section-header text-center">&#11088 NEW ARRIVALS &#11088</h4>#}
+    {#            <div class="row py-5">#}
+    {#                {% for product in new_arrivals %}#}
+    {##}
+    {#                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">#}
+    {#                        <div class="card">#}
+    {#                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">#}
+    {#                            <a href="{% url 'product' %}?category=NEW ARRIVALS"><input type="button" value="see more"></a>#}
+    {##}
+    {##}
+    {#                            <h5>{{ product.name }}</h5>#}
+    {#                            {% if product.updated_price %}#}
+    {#                                <p><small>#}
+    {#                                    <del>৳ {{ product.price }}</del>#}
+    {#                                    <span>৳ {{ product.updated_price }}</span>#}
+    {#                                </small></p>#}
+    {#                            {% else %}#}
+    {#                                <p><small>#}
+    {#                                    <span>৳ {{ product.price }}</span>#}
+    {#                                </small></p>#}
+    {#                            {% endif %}#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {##}
+    {##}
+    {#                {% endfor %}#}
+    {##}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+
+    <!-- new arrival end -->
     <section class="collection">
-        <div class="container py-5">
+        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
             <h4 class="section-header text-center">&#11088 NEW ARRIVALS &#11088</h4>
-            <div class="row py-5">
-                {% for product in new_arrivals %}                        {% if product.category == 'NEW ARRIVALS' %}
+            <div class="row py-5 new-arrival-slick">
 
-                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
-                        <div class="card">
-                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                            <a href="{% url 'product' %}?category=NEW ARRIVALS"><input type="button" value="see more"></a>
+                {% for product in new_arrivals %}
 
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="single-card">
+                            <div class="card_img">
+                                <img src="{{ product.pro_img.url }}" class="" alt="">
+                            </div>
+                            <div class="card_content">
+                                <h4>{{ product.name }}</h4>
 
-                            <h5>{{ product.name }}</h5>
-                            {% if product.updated_price %}
-                                <p><small>
-                                    <del>৳ {{ product.price }}</del>
-                                    <span>৳ {{ product.updated_price }}</span>
-                                </small></p>
-                            {% else %}
-                                <p><small>
-                                    <span>৳ {{ product.price }}</span>
-                                </small></p>
-                            {% endif %}
+                                {% if product.updated_price %}
+                                    <p><small>
+                                        <del>৳ {{ product.price }}</del>
+                                        <span>৳ {{ product.updated_price }}</span>
+                                    </small></p>
+                                {% else %}
+                                    <p><small>
+                                        <span>৳ {{ product.price }}</span>
+                                    </small></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="single-card-hover">
+                            <button class="btn btn-primary single-card-hover-btn-1">
+                                <a style="text-decoration: none; color: #F8F9FA" href="{% url 'product' %}?category=NEW ARRIVALS">See More</a></button>
+
                         </div>
                     </div>
-                {% endif %}
-
-
                 {% endfor %}
-
             </div>
         </div>
     </section>
-
-    <!-- new arrival end -->
 
 
     <!-- organic food start -->
@@ -151,7 +187,8 @@
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <a href="{% url 'product' %}?category=ORGANIC FOOD"><input type="button" value="see more"></a>
+                                <a href="{% url 'product' %}?category=ORGANIC FOOD"><input type="button"
+                                                                                           value="see more"></a>
 
                                 <h5>{{ product.name }}</h5>
                                 {% if product.updated_price %}
@@ -174,25 +211,30 @@
         </div>
     </section>
 
+
     <!--organic food end -->
 
 
     <!-- best selling products start -->
 
+
+
+
     <section class="collection">
-        <div class="container py-5">
-            <h4 class="section-header text-center">&#11088 BEST SELLING PRODUCTS&#11088 </h4>
-            <div class="row py-5">
+        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
+            <h4 class="section-header text-center">&#11088 BEST SELLING PRODUCTS &#11088</h4>
+            <div class="row py-5 new-arrival-slick">
+
                 {% for product in best_selling_product_ins %}
-                    {% if product.category == 'BEST SELLING PRODUCTS' %}
 
-                        <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
-                            <div class="card">
-                                <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <a href="{% url 'product' %}?category=BEST SELLING PRODUCTS"><input type="button" value="see more"></a>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="single-card">
+                            <div class="card_img">
+                                <img src="{{ product.pro_img.url }}" class="" alt="">
+                            </div>
+                            <div class="card_content">
+                                <h4>{{ product.name }}</h4>
 
-
-                                <h5>{{ product.name }}</h5>
                                 {% if product.updated_price %}
                                     <p><small>
                                         <del>৳ {{ product.price }}</del>
@@ -205,10 +247,11 @@
                                 {% endif %}
                             </div>
                         </div>
-                    {% endif %}
-
+                        <div class="single-card-hover">
+                            <button class="btn btn-primary single-card-hover-btn-1">View Details</button>
+                        </div>
+                    </div>
                 {% endfor %}
-
             </div>
         </div>
     </section>
@@ -228,7 +271,8 @@
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <a href="{% url 'product' %}?category=TOP RATED PRODUCTS"><input type="button" value="see more"></a>
+                                <a href="{% url 'product' %}?category=TOP RATED PRODUCTS"><input type="button"
+                                                                                                 value="see more"></a>
 
 
                                 <h5>{{ product.name }}</h5>
@@ -259,11 +303,11 @@
     <section id="about-sec">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5 text-center">
+                <div class="col-lg-5 text-center wow slideInLeft">
                     <img src="{% static 'images/slider/slider1.jpg' %}" width="450" height="150"
                          class="img-fluid about-img">
                 </div>
-                <div class="col-lg-7 text-lg-right  text-center text-color about-text">
+                <div class="col-lg-7 text-lg-right  text-center text-color about-text wow slideInRight">
                     <h1>About Company</h1>
                     <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus aut cupiditate
                         libero eaque ipsum non quam, error repellendus tempora magnam iusto illum, id, saepe
@@ -275,6 +319,13 @@
         </div>
     </section>
     <!---End of About Section---->
+
+
+    <section id="contact-section">
+        <div class="container">
+
+        </div>
+    </section>
 
 
 {% endblock %}
