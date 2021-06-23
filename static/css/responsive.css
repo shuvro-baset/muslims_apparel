@@ -2,219 +2,250 @@
 /* // No media query for `xs` since this is the default in Bootstrap */
 
 /* mini smart devices */
-@media (min-width: 220px) and (max-width: 319.99px){ 
- .card_img img {
-  width: 210px;
-  margin-left: 50%;
-transform: translate(-50%);
- }
- .card_content {
-  margin-left: 50%;
-  transform: translate(-50%);
- }
- .card_content h4 {
-  font-size: 40px;
- }
- .card_content p{
-  font-size: 20px;
- }
- }
+@media (min-width: 220px) and (max-width: 319.99px) {
+    .card_img img {
+        width: 210px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .card_content {
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .card_content h4 {
+        font-size: 40px;
+    }
+
+    .card_content p {
+        font-size: 20px;
+    }
+}
+
 /* extra small devices (andriod/iphones, 320px and up) */
-@media (min-width: 320px) and (max-width: 575.99px){ 
- .card_img img {
-  width: 300px;
-  margin-left: 50%;
-transform: translate(-50%);
- }
- .card_content {
-  margin-left: 50%;
-  transform: translate(-50%);
- }
- .card_content h4 {
-  font-size: 40px;
- }
- .card_content p{
-  font-size: 20px;
- }
- .single-card-hover {
-  left: 0;
-  top: 0;
-  background: transparent;
-  opacity: 1;
-  position: absolute;
- }
- button.btn.btn-primary.single-card-hover-btn-1 {
-  left: 51.5%;
-  position: relative;
-  top: 95%;
- }
- /* dioeireir */
- .single-card-hover {
-	position: absolute;
-	left: 0;
-	top: 0;
-  right: 0;
-	background: transparent;
-	opacity: 1;
-	transition: .9s ease-in;
-	text-align: center;
-	width: 300px;
-	margin-left: 50%;
-	transform: translate(-50%);
+@media (min-width: 320px) and (max-width: 575.99px) {
+    .card_img img {
+        width: 300px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .card_content {
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .card_content h4 {
+        font-size: 40px;
+    }
+
+    .card_content p {
+        font-size: 20px;
+    }
+
+    .single-card-hover {
+        left: 0;
+        top: 0;
+        background: transparent;
+        opacity: 1;
+        position: absolute;
+    }
+
+    button.btn.btn-primary.single-card-hover-btn-1 {
+        left: 51.5%;
+        position: relative;
+        top: 95%;
+    }
+
+    /* dioeireir */
+    .single-card-hover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        background: transparent;
+        opacity: 1;
+        transition: .9s ease-in;
+        text-align: center;
+        width: 300px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .card_content {
+        position: relative;
+        top: 30px;
+    }
+
+    button.btn.btn-primary.single-card-hover-btn-1 {
+        left: 0;
+        position: relative;
+        top: 95%;
+        display: inline-block;
+        width: 299px;
+    }
+
+    button.btn.btn-primary.single-card-hover-btn-1 {
+        left: 0;
+        position: relative;
+        top: 95%;
+        display: inline-block;
+        width: 299px;
+    }
+
+    button.btn.btn-info.single-card-hover-btn-2 {
+        position: relative;
+        right: 0;
+        top: 95%;
+        display: inline-block;
+        width: 299px;
+        margin-top: 10px;
+    }
+
+    .card_content h4 {
+        font-size: 20px;
+        margin-top: 77px;
+        display: inline-block;
+    }
 }
- .card_content {
-  position: relative;
-  top: 30px;
- }
- button.btn.btn-primary.single-card-hover-btn-1 {
-	left: 0;
-	position: relative;
-	top: 95%;
-	display: inline-block;
-	width: 299px;
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.99px) {
+    .card_img img {
+        width: 233px;
+    }
+
+    .single-card-hover {
+        width: 269px;
+        opacity: 1;
+        background-color: transparent;
+    }
+
+    button.btn.btn-primary.single-card-hover-btn-1 {
+        left: 0;
+        position: relative;
+        top: 99%;
+    }
+
+    button.btn.btn-info.single-card-hover-btn-2 {
+        left: 23%;
+        top: 99%;
+    }
+
+    .card_content {
+        position: relative;
+        z-index: 109;
+        top: 30px;
+        margin-left: 15px;
+    }
+
+    .single-card-hover-2 {
+        height: 67%;
+        width: 233.5px;
+    }
+
+    button.btn.btn-primary.single-card-hover-2-btn-1 {
+        left: 62px;
+    }
+
+    button.btn.btn-info.single-card-hover-2-btn-2 {
+        position: relative;
+        left: -51px;
+        top: 164px;
+    }
+
 }
- button.btn.btn-primary.single-card-hover-btn-1 {
-	left: 0;
-	position: relative;
-	top: 95%;
-	display: inline-block;
-	width: 299px;
-}
-button.btn.btn-info.single-card-hover-btn-2 {
-	position: relative;
-	right: 0;
-	top: 95%;
-	display: inline-block;
-	width: 299px;
-	margin-top: 10px;
-}
-.card_content h4 {
-	font-size: 20px;
-	margin-top: 77px;
-	display: inline-block;
-}
- }
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.99px){ 
- .card_img img {
-  width: 233px;
- }
- .single-card-hover {
-  width: 269px;
-  opacity: 1;
-  background-color: transparent;
- }
- button.btn.btn-primary.single-card-hover-btn-1 {
-  left: 0;
-  position: relative;
-  top: 99%;
- }
- button.btn.btn-info.single-card-hover-btn-2 {
-  left: 23%;
-  top: 99%;
- }
- .card_content {
-  position: relative;
-  z-index: 109;
-  top: 30px;
-  margin-left: 15px;
- }
- 
- .single-card-hover-2 {
-  height: 67%;
-  width: 233.5px;
- }
- button.btn.btn-primary.single-card-hover-2-btn-1 {
-  left: 62px;
- }
- button.btn.btn-info.single-card-hover-2-btn-2 {
-  position: relative;
-  left: -51px;
-  top: 164px;
- }
- 
- }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.99px){ 
-  .card_img img {
-   width: 215px;
-  }
-  .single-card-hover {
-   left: 16px;
-   top: 0;
-   height: 74.5%;
-   width: 214px;
-  }
-  .card_content {
-   text-align: center;
-   margin-left: 0;
-  }
-  .single-card-hover-2 {
-   height: 65%;
-   width: 213.5px;
-  }
-  
- }
+@media (min-width: 768px) and (max-width: 991.99px) {
+    .card_img img {
+        width: 215px;
+    }
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.99px){
- .card_img img {
-  width: 225px;
-  margin-bottom: 25px;
-  border-radius: 5px;
- }
- .single-card-hover {
-  height: 75.5%;
-  width: 225px;
- }
- button.btn.btn-primary.single-card-hover-btn-1 {
-  left: 59px;
-  position: relative;
-  top: 180px;
- }
- button.btn.btn-info.single-card-hover-btn-2 {
-  position: relative;
-  left: 0%;
-  transform: translate(-50%);
-  top: 108px;
- }
+    .single-card-hover {
+        left: 16px;
+        top: 0;
+        height: 74.5%;
+        width: 214px;
+    }
+
+    .card_content {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .single-card-hover-2 {
+        height: 65%;
+        width: 213.5px;
+    }
+
 }
 
- 
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.99px) {
+    .card_img img {
+        width: 225px;
+        margin-bottom: 25px;
+        border-radius: 5px;
+    }
+
+    .single-card-hover {
+        height: 75.5%;
+        width: 225px;
+    }
+
+    button.btn.btn-primary.single-card-hover-btn-1 {
+        left: 59px;
+        position: relative;
+        top: 180px;
+    }
+
+    button.btn.btn-info.single-card-hover-btn-2 {
+        position: relative;
+        left: 0%;
+        transform: translate(-50%);
+        top: 108px;
+    }
+}
+
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
- button.btn.btn-info.single-card-hover-btn-2 {
-  position: relative;
-  left: 5%;
-  top: 162px;
- }
- button.btn.btn-primary.single-card-hover-btn-1 {
-  left: 27.33%;
-  position: relative;
-  top: 257px;
- }
- .single-card-hover-2 {
-  position: absolute;
-  left: 16px;
-  top: 0;
-  content: '';
-  height: 70%;
-  width: 267.5px;
-  border-radius: 5px;
-  background: #000000a3;
-  opacity: 0;
- }
- button.btn.btn-primary.single-card-hover-2-btn-1 {
-  position: relative;
-  top: 81px;
-  left: 80px;
- }
- button.btn.btn-info.single-card-hover-2-btn-2 {
-  position: relative;
-  left: -34px;
-  top: 178px;
- }
+@media (min-width: 1200px) {
+    button.btn.btn-info.single-card-hover-btn-2 {
+        position: relative;
+        left: 5%;
+        top: 162px;
+    }
 
- }
+    button.btn.btn-primary.single-card-hover-btn-1 {
+        left: 27.33%;
+        position: relative;
+        top: 257px;
+    }
+
+    .single-card-hover-2 {
+        position: absolute;
+        left: 16px;
+        top: 0;
+        content: '';
+        height: 70%;
+        width: 267.5px;
+        border-radius: 5px;
+        background: #000000a3;
+        opacity: 0;
+    }
+
+    button.btn.btn-primary.single-card-hover-2-btn-1 {
+        position: relative;
+        top: 81px;
+        left: 80px;
+    }
+
+    button.btn.btn-info.single-card-hover-2-btn-2 {
+        position: relative;
+        left: -34px;
+        top: 178px;
+    }
+
+}

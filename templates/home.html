@@ -101,42 +101,7 @@
 
 
     <!-- new arrival start -->
-
-    {#    <section class="collection">#}
-    {#        <div class="container py-5">#}
-    {#            <h4 class="section-header text-center">&#11088 NEW ARRIVALS &#11088</h4>#}
-    {#            <div class="row py-5">#}
-    {#                {% for product in new_arrivals %}#}
-    {##}
-    {#                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">#}
-    {#                        <div class="card">#}
-    {#                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">#}
-    {#                            <a href="{% url 'product' %}?category=NEW ARRIVALS"><input type="button" value="see more"></a>#}
-    {##}
-    {##}
-    {#                            <h5>{{ product.name }}</h5>#}
-    {#                            {% if product.updated_price %}#}
-    {#                                <p><small>#}
-    {#                                    <del>৳ {{ product.price }}</del>#}
-    {#                                    <span>৳ {{ product.updated_price }}</span>#}
-    {#                                </small></p>#}
-    {#                            {% else %}#}
-    {#                                <p><small>#}
-    {#                                    <span>৳ {{ product.price }}</span>#}
-    {#                                </small></p>#}
-    {#                            {% endif %}#}
-    {#                        </div>#}
-    {#                    </div>#}
-    {##}
-    {##}
-    {#                {% endfor %}#}
-    {##}
-    {#            </div>#}
-    {#        </div>#}
-    {#    </section>#}
-
-    <!-- new arrival end -->
-    <section class="collection">
+<section class="collection">
         <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
             <h4 class="section-header text-center">&#11088 NEW ARRIVALS &#11088</h4>
             <div class="row py-5 new-arrival-slick">
@@ -165,7 +130,8 @@
                         </div>
                         <div class="single-card-hover">
                             <button class="btn btn-primary single-card-hover-btn-1">
-                                <a style="text-decoration: none; color: #F8F9FA" href="{% url 'product' %}?category=NEW ARRIVALS">See More</a></button>
+                                <a style="text-decoration: none; color: #F8F9FA"
+                                   href="{% url 'product' %}?category=NEW ARRIVALS">See More</a></button>
 
                         </div>
                     </div>
@@ -173,6 +139,9 @@
             </div>
         </div>
     </section>
+
+    <!-- new arrival end -->
+
 
 
     <!-- organic food start -->
@@ -248,7 +217,9 @@
                             </div>
                         </div>
                         <div class="single-card-hover">
-                            <button class="btn btn-primary single-card-hover-btn-1">View Details</button>
+                            <button class="btn btn-primary single-card-hover-btn-1">
+                                <a style="text-decoration: none; color: #F8F9FA"
+                                   href="{% url 'product' %}?category=BEST SELLING PRODUCTS">See More</a></button>
                         </div>
                     </div>
                 {% endfor %}
@@ -321,11 +292,6 @@
     <!---End of About Section---->
 
 
-    <section id="contact-section">
-        <div class="container">
-
-        </div>
-    </section>
 
 
 {% endblock %}
