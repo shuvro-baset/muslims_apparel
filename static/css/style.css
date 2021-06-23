@@ -1,7 +1,14 @@
 
 
 /****  Navbar Start  ****/
-
+/* resposive navbar x icon css  strt*/
+.hidden{
+    display: none;
+  }
+  #navbar-close i {
+	font-size: 35px;
+}
+/* resposive navbar x icon css end */
 .navbar-light .navbar-brand {
     font-size: 35px;
     font-weight: bold;
@@ -76,9 +83,66 @@
 .single-card {
     margin-bottom: 10px;
 }
-.card {
-    border: none;
+
+
+.card_img img {
+    width: 270px;
+    margin-bottom: 25px;
+    border-radius: 5px;
 }
+.card_content {
+    text-align: center;
+    display: inline-block;
+    width: 206px;
+    margin-left: 50%;
+}
+.card_content h4 {
+    color: #2a2a65;
+    font-weight: 300;
+}
+.slick-dots li button:before {
+    font-size: 40px;
+    color: #af75ea;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #af75ea;
+}
+.slider-left,.slider-right{
+    position: relative;
+    z-index: 555;
+}
+.single-card{
+    position: relative;
+}
+.single-card-hover {
+	position: absolute;
+	left: 16px;
+	top: 0;
+	content: '';
+	height: 78.5%;
+	width: 269px;
+	border-radius: 5px;
+	background: #000000a3;
+	opacity: 0;
+    transition:.9s ease-in;
+}
+.single-card-hover:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+button.btn.btn-primary.single-card-hover-btn-1 {
+    left: 50px;
+    position: relative;
+    top: 180px;
+}
+button.btn.btn-info.single-card-hover-btn-2 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 62px;
+}
+/* //single-card */
 .collection input {
     position: absolute;
     top: 40%;
@@ -107,8 +171,53 @@
 
 
 /*new arrival end*/
+/* slider arrow css start */
+.slick-prev::before, .slick-next::before {
+	font-size: 30px;
+	opacity: 1;
+	color: #b47eeb;
+}
+.slick-prev {
+	left: -25px;
+	top: 40%;
+}
+.slick-next {
+	right: -25px;
+	top: 40%;
+}
+/* slider arrow css end */
 
-
+/* best selling css strt */
+.single-card-2{
+    position: relative;
+}
+.single-card-hover-2 {
+	position: absolute;
+	left: 15px;
+	top: 0;
+	content: '';
+	height: 66%;
+	width: 223.5px;
+	border-radius: 5px;
+	background: #000000a3;
+	opacity: 0;
+}
+.single-card-hover-2:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition:.9s ease-in;
+}
+button.btn.btn-primary.single-card-hover-2-btn-1 {
+    position: relative;
+    top: 36px;
+    left: 50px;
+}
+button.btn.btn-info.single-card-hover-2-btn-2 {
+    position: relative;
+    left: 54px;
+    top: 78px;
+}
+/* best selling css end */
 
 .about-sec{
     margin-top: 25px;
@@ -121,7 +230,48 @@
     margin-bottom: 130px;
 }
 
-
+/* social css start */
+.social_section{}
+.social_section a {
+    display: inline-block;
+    margin: 0 20px;
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(0,0,0.1);
+    border-radius: 50px;
+    line-height: 60px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    
+}
+.social_section a:nth-child(1) :hover i{
+    background-color: #3b5998 ;
+}
+.social_section a:nth-child(2) :hover i{
+    background-color: #00acee;
+}
+.social_section a:nth-child(3) :hover i{
+    background-color: #8a3ab9;
+}
+.social_section a:nth-child(4) :hover i{
+    background-color: #075e54;
+}
+.social_section a:hover {
+    width: 200px;
+}
+.social_section a i {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50%;
+}
+.social_section a span{}
+/* social css end */
 /*footer start*/
 
 footer {
