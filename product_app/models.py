@@ -9,10 +9,9 @@ class Slider(models.Model):
 
 class Product(models.Model):
     CATEGORY = (
-        ('NEW ARRIVALS', 'NEW ARRIVALS'),
+        ('UPCOMING PRODUCTS', 'UPCOMING PRODUCTS'),
         ('ORGANIC FOOD', 'ORGANIC FOOD'),
-        ('BEST SELLING PRODUCTS', 'BEST SELLING PRODUCTS'),
-        ('TOP RATED PRODUCTS', 'TOP RATED PRODUCTS'),
+        ('MOST DEMANDABLE PRODUCTS', 'MOST DEMANDABLE PRODUCTS'),
         ('KHILMAR', 'KHILMAR'),
         ('JILBAB', 'JILBAB'),
         ('ABAYA/BORKA', 'ABAYA/BORKA'),
@@ -21,8 +20,7 @@ class Product(models.Model):
         ('CAPE', 'CAPE'),
         ('NIQAB', 'NIQAB'),
         ('HAND GLOVES & SOCKS', 'HAND GLOVES & SOCKS'),
-        ('SUNNAH ITEM', 'SUNNAH ITEM'),
-        ('ORGANIC FOOD', 'ORGANIC FOOD'),
+        ('SUNNAH ITEM', 'SUNNAH ITEM'), 
     )
     name = models.CharField(max_length=20)
     description = models.CharField(max_length=200)

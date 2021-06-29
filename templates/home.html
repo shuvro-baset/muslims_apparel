@@ -108,10 +108,10 @@
     <!-- new arrival start -->
 <section class="collection">
         <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
-            <h4 class="section-header text-center">&#11088 NEW ARRIVALS &#11088</h4>
+            <h4 class="section-header text-center">&#11088 UPCOMING PRODUCTS &#11088</h4>
             <div class="row py-5 new-arrival-slick">
 
-                {% for product in new_arrivals %}
+                {% for product in upcoming_prdct_ins %}
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="single-card">
@@ -136,7 +136,7 @@
                         <div class="single-card-hover">
                             <button class="btn btn-primary single-card-hover-btn-1">
                                 <a style="text-decoration: none; color: #F8F9FA"
-                                   href="{% url 'product' %}?category=NEW ARRIVALS">See More</a></button>
+                                   href="{% url 'product' %}?category=UPCOMING PRODUCTS">See More</a></button>
 
                         </div>
                     </div>
@@ -149,19 +149,19 @@
 
 
 
-    <!-- organic food start -->
+    <!-- Most Demandable Products start -->
 
     <section class="collection">
         <div class="container py-5">
             <h4 class="section-header text-center">&#11088 ORGANIC FOOD &#11088</h4>
             <div class="row py-5">
                 {% for product in organic_food_ins %}
-                    {% if product.category == 'ORGANIC FOOD' %}
+{#                    {% if product.category == 'Most Demandable Products' %}#}
 
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <a href="{% url 'product' %}?category=ORGANIC FOOD"><input type="button"
+                                <a href="{% url 'product' %}?category=OGRGANIC FOOD"><input type="button"
                                                                                            value="see more"></a>
 
                                 <h5>{{ product.name }}</h5>
@@ -177,7 +177,7 @@
                                 {% endif %}
                             </div>
                         </div>
-                    {% endif %}
+{#                    {% endif %}#}
 
                 {% endfor %}
 
@@ -186,7 +186,7 @@
     </section>
 
 
-    <!--organic food end -->
+    <!--Most Demandable Products end -->
 
 
     <!-- best selling products start -->
@@ -196,10 +196,10 @@
 
     <section class="collection">
         <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
-            <h4 class="section-header text-center">&#11088 BEST SELLING PRODUCTS &#11088</h4>
+            <h4 class="section-header text-center">&#11088 MOST DEMANDABLE PRODUCTS &#11088</h4>
             <div class="row py-5 new-arrival-slick">
 
-                {% for product in best_selling_product_ins %}
+                {% for product in most_demandable_prdct_ins %}
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="single-card">
@@ -224,7 +224,7 @@
                         <div class="single-card-hover">
                             <button class="btn btn-primary single-card-hover-btn-1">
                                 <a style="text-decoration: none; color: #F8F9FA"
-                                   href="{% url 'product' %}?category=BEST SELLING PRODUCTS">See More</a></button>
+                                   href="{% url 'product' %}?category=MOST DEMANDABLE PRODUCTS">See More</a></button>
                         </div>
                     </div>
                 {% endfor %}
@@ -239,15 +239,14 @@
 
     <section class="collection">
         <div class="container py-5">
-            <h4 class="section-header text-center">&#11088 TOP RATED PRODUCTS &#11088</h4>
+            <h4 class="section-header text-center">&#11088 SUNNAH ITEM &#11088</h4>
             <div class="row py-5">
-                {% for product in top_rated_products_ins %}
-                    {% if product.category == 'TOP RATED PRODUCTS' %}
+                {% for product in sunnar_item_ins %}
 
                         <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                             <div class="card">
                                 <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                                <a href="{% url 'product' %}?category=TOP RATED PRODUCTS"><input type="button"
+                                <a href="{% url 'product' %}?category=SUNNAH ITEM"><input type="button"
                                                                                                  value="see more"></a>
 
 
@@ -264,7 +263,6 @@
                                 {% endif %}
                             </div>
                         </div>
-                    {% endif %}
 
                 {% endfor %}
 

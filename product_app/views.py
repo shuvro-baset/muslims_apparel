@@ -12,19 +12,18 @@ def home(request):
     slider_ins = Slider.objects.all().order_by('-id')
     # fetch all products instances from product model
     product_ins = Product.objects.all().order_by('-id')
-    new_arrival_ins = Product.objects.filter(category='NEW ARRIVALS').order_by('-id')[:8]
+    upcoming_prdct_ins = Product.objects.filter(category='UPCOMING PRODUCTS').order_by('-id')[:8]
     organic_food_ins = Product.objects.filter(category='ORGANIC FOOD').order_by('-id')[:8]
-    best_selling_product_ins = Product.objects.filter(category='BEST SELLING PRODUCTS').order_by('-id')[:8]
-    top_rated_products_ins = Product.objects.filter(category='TOP RATED PRODUCTS').order_by('-id')[:8]
-    print(new_arrival_ins)
+    most_demandable_prdct_ins = Product.objects.filter(category='MOST DEMANDABLE PRODUCTS').order_by('-id')[:8]
+    sunnar_item_ins = Product.objects.filter(category='SUNNAH ITEM').order_by('-id')[:8]
 
     context = {
         'products': product_ins,
         'sliders': slider_ins,
-        'new_arrivals': new_arrival_ins,
+        'upcoming_prdct_ins': upcoming_prdct_ins,
         'organic_food_ins': organic_food_ins,
-        'best_selling_product_ins': best_selling_product_ins,
-        'top_rated_products_ins': top_rated_products_ins,
+        'most_demandable_prdct_ins': most_demandable_prdct_ins,
+        'sunnar_item_ins': sunnar_item_ins,
     }
     return render(request, 'home.html', context)
 
