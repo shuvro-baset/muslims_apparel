@@ -8,6 +8,10 @@
   #navbar-close i {
 	font-size: 35px;
 }
+
+.after-navbar {
+  margin-top: 90px;
+}
 /* resposive navbar x icon css end */
 .navbar-light .navbar-brand {
     font-size: 35px;
