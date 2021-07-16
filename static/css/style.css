@@ -2,6 +2,11 @@
 
 /****  Navbar Start  ****/
 /* resposive navbar x icon css  strt*/
+html,body{
+    overflow-x: hidden;
+}
+
+
 .hidden{
     display: none;
   }
