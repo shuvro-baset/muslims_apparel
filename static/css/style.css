@@ -270,6 +270,28 @@ button.btn.btn-info.single-card-hover-2-btn-2 {
 
 .about-sec {
     margin-top: 25px;
+
+}
+
+/*.about-text{*/
+/*    border-left: 7px solid;*/
+/*    border-radius: 10px;*/
+/*    border-image: linear-gradient(180deg, rgb(132, 10, 231), rgb(0, 4, 255));*/
+/*    border-image-slice: 1;*/
+/*}*/
+.about-text p {
+    border: 1px solid #0a0280;
+    border-radius: 15px;
+    color: black;
+    transition: width 1s, height 1s, transform 3s;
+
+}
+
+.about-text p:hover {
+    background-color: #0a0280;
+    color: white;
+    transform: scale(0.9);
+
 }
 
 .text-color {
