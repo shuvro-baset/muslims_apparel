@@ -84,12 +84,17 @@ html, body {
     border-image: linear-gradient(180deg, rgb(44, 185, 241), rgb(0, 4, 255));
     border-image-slice: 1;
     color: #2a2a65;
-    /*background-color: #0a0280;*/
     font-weight: 700;
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: width 1s, height 1s, transform 3s;
+
+    box-shadow: 2px 0px 8px 10px rgb(26 26 27 / 13%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.section-header:hover {
+    transform: scale(0.9);
 
 }
 
