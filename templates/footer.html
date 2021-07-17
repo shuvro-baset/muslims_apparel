@@ -2,39 +2,54 @@
 
 
 <!-- footer start -->
- <div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<div class="social_section">
-					<a href="" class="">
-						<i class="fa fa-facebook" aria-hidden="true"></i>
-						<span>facebook</span>
-					</a>
-					<a href="" class="tn">
-						<i class="fa fa-twitter" aria-hidden="true"></i>
-						<span>twitter</span>
-					</a>
-					<a href="" class="">
-						<i class="fa fa-instagram" aria-hidden="true"></i>
-						<span>instagram</span>
-					</a>
-					<a href="" class="">
-						<i class="fa fa-whatsapp" aria-hidden="true"></i>
-						<span>whatsapp</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="d-flex align-items-center">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="social_section">
+                <a href="" class="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <span>facebook</span>
+                </a>
+                <a href="" class="tn">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <span>twitter</span>
+                </a>
+                <a href="" class="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span>instagram</span>
+                </a>
+                <a href="" class="">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <span>whatsapp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="d-flex align-items-center">
 
-		<div class="container d-flex justify-content-between">
-			<span>Copyright 2021 © Muslims Apparel</span>
-			<span>Developed By: <a target="_blank" href="https://www.facebook.com/atiq.ea">Atiq</a> &   <a target="_blank" href="https://www.facebook.com/shuvro.baset.7/">Shuvro</a></span>
-		</div>
+    <div class="container d-flex py-3 justify-content-around">
+			<span>
+                <li><a href="{% url 'home' %}">home</a></li>
+                <li><a href="{% url 'product' %}?category=KHILMAR">KHILMAR</a></li>
+                <li><a href="{% url 'product' %}?category=JILBAB">JILBAB</a></li>
+                <li><a href="{% url 'product' %}?category=ABAYA/BORKA">ABAYA/BORKA</a></li>
+                <br>
+                <h6>Copyright 2021 © Muslims Apparel</h6>
+            </span>
+        <span>
+            <li><a href="{% url 'product' %}?category=LINEN">LINEN</a></li>
+            <li><a href="{% url 'product' %}?category=COTTON">COTTON</a></li>
+            <li><a href="{% url 'product' %}?category=CAPE">CAPE</a></li>
+            <li><a href="{% url 'product' %}?category=NIQAB">NIQAB</a></li>
+            <br>
+            <h6>Developed By: <a target="_blank" href="https://www.facebook.com/atiq.ea">Atiq</a> &   <a target="_blank"
+                                                                                                     href="https://www.facebook.com/shuvro.baset.7/">Shuvro</a></h6>
+        </span>
+    </div>
 
-	</footer>
+</footer>
 
 
-	<!-- footer end -->
+<!-- footer end -->
 

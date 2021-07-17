@@ -365,8 +365,8 @@ button.btn.btn-info.single-card-hover-2-btn-2 {
 /*footer start*/
 
 footer {
-    height: 70px;
-    background-color: #0a0280;
+    /*height: 70px;*/
+    background-color: #020015;
     color: #fff;
     font-size: 18px;
     font-weight: 700;
