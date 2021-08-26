@@ -4,14 +4,10 @@
 
 {% block content %}
 
-
-
     <!-- Slider Start -->
-
     <section>
         <div class="container after-navbar">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
                 <ol class="carousel-indicators">
                     {% for slider in sliders %}
                         {% if forloop.first %}
@@ -101,12 +97,9 @@
             </div>
         </div>
     </section>
-    <!---End of Service Section=======-->
+    <!---End of Service Section --->
 
-
-
-
-    <!-- new arrival start -->
+    <!-- UPCOMING PRODUCTS start -->
     <section class="collection">
         <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
             <h4 style="text-shadow: 1px 1px 0px #03afaa;"
@@ -114,7 +107,6 @@
             <div class="row py-5 new-arrival-slick">
 
                 {% for product in upcoming_prdct_ins %}
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="single-card">
                             <div class="card_img">
@@ -147,64 +139,16 @@
         </div>
     </section>
 
-    <!-- new arrival end -->
+    <!-- UPCOMING PRODUCTS end -->
 
 
-
-    <!-- Most Demandable Products start -->
-
+    <!-- MOST DEMANDABLE Products start -->
     <section class="collection">
         <div class="container py-5">
             <h4 style="text-shadow: 1px 1px 0px #03afaa;"
-                class="section-header py-2 w-50 mx-auto text-center"> ORGANIC FOOD </h4>
+                class="section-header py-2 w-50 mx-auto text-center"> MOST DEMANDABLE PRODUCTS</h4>
             <div class="row py-5">
-                {% for product in organic_food_ins %}
-                    {#                    {% if product.category == 'Most Demandable Products' %}#}
-
-                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
-                        <div class="card">
-                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                            <a href="{% url 'product' %}?category=OGRGANIC FOOD"><input type="button"
-                                                                                        value="see more"></a>
-
-                            <h5>{{ product.name }}</h5>
-                            {% if product.updated_price %}
-                                <p><small>
-                                    <del>৳ {{ product.price }}</del>
-                                    <span>৳ {{ product.updated_price }}</span>
-                                </small></p>
-                            {% else %}
-                                <p><small>
-                                    <span>৳ {{ product.price }}</span>
-                                </small></p>
-                            {% endif %}
-                        </div>
-                    </div>
-                    {#                    {% endif %}#}
-
-                {% endfor %}
-
-            </div>
-        </div>
-    </section>
-
-
-    <!--Most Demandable Products end -->
-
-
-    <!-- best selling products start -->
-
-
-
-
-    <section class="collection">
-        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
-            <h4 style="text-shadow: 1px 1px 0px #03afaa;"
-                class="section-header py-2 w-50 mx-auto text-center"> MOST DEMANDABLE PRODUCTS </h4>
-            <div class="row py-5 new-arrival-slick">
-
                 {% for product in most_demandable_prdct_ins %}
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div class="single-card">
                             <div class="card_img">
@@ -235,25 +179,62 @@
             </div>
         </div>
     </section>
+    <!--MOST DEMANDABLE Products end -->
 
-    <!--best selling products end -->
-
-
-    <!-- top rated products start -->
-
+    <!-- Niqab PRODUCTS start -->
     <section class="collection">
-        <div class="container py-5">
+        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
             <h4 style="text-shadow: 1px 1px 0px #03afaa;"
-                class="section-header py-2 w-50 mx-auto text-center"> SUNNAH ITEM </h4>
-            <div class="row py-5">
-                {% for product in sunnar_item_ins %}
+                class="section-header py-2 w-50 mx-auto text-center"> NIQAB PRODUCTS </h4>
+            <div class="row py-5 new-arrival-slick">
 
+                {% for product in niqab_item_ins %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="single-card">
+                            <div class="card_img">
+                                <img src="{{ product.pro_img.url }}" class="" alt="">
+                            </div>
+                            <div class="card_content">
+                                <h4>{{ product.name }}</h4>
+
+                                {% if product.updated_price %}
+                                    <p><small>
+                                        <del>৳ {{ product.price }}</del>
+                                        <span>৳ {{ product.updated_price }}</span>
+                                    </small></p>
+                                {% else %}
+                                    <p><small>
+                                        <span>৳ {{ product.price }}</span>
+                                    </small></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="single-card-hover">
+                            <button class="btn btn-primary single-card-hover-btn-1">
+                                <a style="text-decoration: none; color: #F8F9FA"
+                                   href="{% url 'product' %}?category=NIQAB">See More</a></button>
+
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Niqab PRODUCTS end -->
+
+    <!-- ORGANIC FOOD   products start -->
+    <section class="collection">
+        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
+            <h4 style="text-shadow: 1px 1px 0px #03afaa;"
+                class="section-header py-2 w-50 mx-auto text-center"> ORGANIC FOOD </h4>
+            <div class="row py-5 new-arrival-slick">
+                {% for product in organic_food_ins %}
                     <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="card">
                             <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                            <a href="{% url 'product' %}?category=SUNNAH ITEM"><input type="button"
-                                                                                      value="see more"></a>
-
+                            <a href="{% url 'product' %}?category=OGRGANIC FOOD"><input type="button"
+                                                                                        value="see more"></a>
 
                             <h5>{{ product.name }}</h5>
                             {% if product.updated_price %}
@@ -270,12 +251,47 @@
                     </div>
 
                 {% endfor %}
-
             </div>
         </div>
     </section>
 
-    <!--top rated products end -->
+    <!--ORGANIC FOOD  products end -->
+
+
+    <!-- SUNNAH ITEM products start -->
+
+    <section class="collection">
+        <div class="container py-5">
+            <h4 style="text-shadow: 1px 1px 0px #03afaa;"
+                class="section-header py-2 w-50 mx-auto text-center"> SUNNAH ITEM </h4>
+            <div class="row py-5">
+                {% for product in sunnar_item_ins %}
+
+                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="card">
+                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
+                            <a href="{% url 'product' %}?category=SUNNAH ITEM"><input type="button"
+                                                                                      value="see more"></a>
+
+                            <h5>{{ product.name }}</h5>
+                            {% if product.updated_price %}
+                                <p><small>
+                                    <del>৳ {{ product.price }}</del>
+                                    <span>৳ {{ product.updated_price }}</span>
+                                </small></p>
+                            {% else %}
+                                <p><small>
+                                    <span>৳ {{ product.price }}</span>
+                                </small></p>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!--SUNNAH ITEM products end -->
 
 
     <!---About Section=====-->
@@ -283,23 +299,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 text-center wow slideInLeft">
-                    <img src="{% static 'images/slider/slider1.jpg' %}" width="450" height="150"
+                    <img src="{{ about_ins.abt_img.url }}" width="450" height="150"
                          class="img-fluid about-img">
                 </div>
                 <div class="col-lg-7 text-lg-right  text-center text-color about-text wow slideInRight">
                     <h1 style="text-align: center;text-shadow: 1px 1px 0px #03afaa; color: #0a0280">About Company</h1>
-                    <p style="text-align: justify;" class="text py-3 px-5">"Muslims Apparel.Com.bd" is an online based Islamic
-                        brand, where you find all necessary Islamic items, cloths for men& women & Sunnah items,Organic
-                        foods at a reasonable price In Sha Allah. Alhamdulillah
-                        It is one of the trustable online solution at affordable & modest collection offering Abaya,
-                        Jilbab , khimar, Skirt, Borkha,Solah special khimar, Non maharam purpose khimar, Different types
-                        of hijab, Shrug,Kaftan, Kurtis,Cape,Plump pant,Maternity special wears & more.
-                        Our food item is Ajwah dates, Honey,Tin,Zaitun etc.
-                        We promised to provide a better shopping & delivery service our honourable clients.
-                        We have a strong customer care service.
-                        we provide your desired quality fabric & finishing at a reasonable price.Qualified Manpowers are
-                        working our production house.Skillful Manpowers are conduct our page
-                        professionally,Alhamdulillah.
+                    <p style="text-align: justify;" class="text py-3 px-5">
+                        {{ about_ins.text }}
                         <br>
                         Jajakumullahu khairan <br>
                         Aysha Binte Mojibur <br>
@@ -312,6 +318,32 @@
     <!---End of About Section---->
 
 
+<div class="container">
+    <h4 style="text-shadow: 1px 1px 0px #03afaa;"
+                class="section-header py-2 w-50 mx-auto text-center"> Our Social Media </h4>
+    <div class="row">
+        <div class="col-lg-12 text-center my-5">
+            <div class="social_section d-flex justify-content-around flex-wrap">
+                <a href="" class="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <span>facebook</span>
+                </a>
+                <a href="" class="tn">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <span>twitter</span>
+                </a>
+                <a href="" class="">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <span>instagram</span>
+                </a>
+                <a href="" class="">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <span>whatsapp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% endblock %}

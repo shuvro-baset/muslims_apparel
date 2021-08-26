@@ -16,7 +16,8 @@ def home(request):
     organic_food_ins = Product.objects.filter(category='ORGANIC FOOD').order_by('-id')[:8]
     most_demandable_prdct_ins = Product.objects.filter(category='MOST DEMANDABLE PRODUCTS').order_by('-id')[:8]
     sunnar_item_ins = Product.objects.filter(category='SUNNAH ITEM').order_by('-id')[:8]
-
+    niqab_item_ins = Product.objects.filter(category='NIQAB').order_by('-id')[:8]
+    about_ins = About.objects.all().first()
     context = {
         'products': product_ins,
         'sliders': slider_ins,
@@ -24,6 +25,8 @@ def home(request):
         'organic_food_ins': organic_food_ins,
         'most_demandable_prdct_ins': most_demandable_prdct_ins,
         'sunnar_item_ins': sunnar_item_ins,
+        'niqab_item_ins': niqab_item_ins,
+        'about_ins': about_ins
     }
     return render(request, 'home.html', context)
 

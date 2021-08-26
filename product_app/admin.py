@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Slider, Product
+
+from .models import Slider, Product, About
 # Register your models here.
 @admin.register(Slider)
 class SliderAdmin(admin.ModelAdmin):
@@ -12,3 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ['name', 'price']
     list_filter = ['price']
     ordering = ['name']
+
+@admin.register(About)
+class AboutAdmin(admin.ModelAdmin):
+    list_display = ['text', 'abt_img']

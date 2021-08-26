@@ -32,3 +32,8 @@ class Product(models.Model):
     def delete(self, using=None, keep_parents=False):
         self.pro_img.storage.delete(self.pro_img.path)
         super().delete()
+
+
+class About(models.Model):
+    text = models.TextField()
+    abt_img = models.ImageField(upload_to='about_images', help_text=mark_safe('<h2 style="color: #008CBA;">Images size must be height: 1200px and width: 1486px format.</h2>'))  # size must be ato ato pixel)
