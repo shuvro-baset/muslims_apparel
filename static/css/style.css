@@ -104,7 +104,7 @@ html, body {
 /*new arrival start*/
 
 .collection span {
-    color: #8e44ad;
+    color: #0a0280;
     font-size: 19px;
     font-weight: 700;
     padding-left: 5px;
@@ -135,12 +135,12 @@ html, body {
 
 .slick-dots li button:before {
     font-size: 40px;
-    color: #af75ea;
+    color: #0a0280;
 }
 
 .slick-dots li.slick-active button:before {
     opacity: .75;
-    color: #af75ea;
+    color: #0a0280;
 }
 
 .slider-left, .slider-right {
@@ -191,7 +191,7 @@ button.btn.btn-info.single-card-hover-btn-2 {
     opacity: 0;
     height: 45px;
     width: 110px;
-    background-color: #af75ea;
+    background-color: #0a0280;
     color: #fff;
     border-radius: 5px;
     outline: none;
@@ -206,7 +206,7 @@ button.btn.btn-info.single-card-hover-btn-2 {
 }
 
 .collection input:hover {
-    background-color: #8e44ad;
+    background-color: #0a0280;
     transition: 0.5s;
 }
 
@@ -216,7 +216,7 @@ button.btn.btn-info.single-card-hover-btn-2 {
 .slick-prev::before, .slick-next::before {
     font-size: 30px;
     opacity: 1;
-    color: #b47eeb;
+    color: #0a0280;
 }
 
 .slick-prev {

@@ -22,8 +22,8 @@ class Product(models.Model):
         ('HAND GLOVES & SOCKS', 'HAND GLOVES & SOCKS'),
         ('SUNNAH ITEM', 'SUNNAH ITEM'), 
     )
-    name = models.CharField(max_length=20)
-    description = models.CharField(max_length=200)
+    name = models.CharField(max_length=50)
+    description = models.TextField()
     pro_img = models.ImageField(upload_to='product_images', help_text=mark_safe('<h2 style="color: #008CBA;">Images size must be height: 1200px and width: 1486px format.</h2>'))  # size must be ato ato pixel)
     price = models.CharField(max_length=10)
     updated_price = models.CharField(max_length=10, blank=True, null=True)

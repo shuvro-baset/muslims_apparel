@@ -223,40 +223,6 @@
 
     <!-- Niqab PRODUCTS end -->
 
-    <!-- ORGANIC FOOD   products start -->
-    <section class="collection">
-        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
-            <h4 style="text-shadow: 1px 1px 0px #03afaa;"
-                class="section-header py-2 w-50 mx-auto text-center"> ORGANIC FOOD </h4>
-            <div class="row py-5 new-arrival-slick">
-                {% for product in organic_food_ins %}
-                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
-                        <div class="card">
-                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
-                            <a href="{% url 'product' %}?category=OGRGANIC FOOD"><input type="button"
-                                                                                        value="see more"></a>
-
-                            <h5>{{ product.name }}</h5>
-                            {% if product.updated_price %}
-                                <p><small>
-                                    <del>৳ {{ product.price }}</del>
-                                    <span>৳ {{ product.updated_price }}</span>
-                                </small></p>
-                            {% else %}
-                                <p><small>
-                                    <span>৳ {{ product.price }}</span>
-                                </small></p>
-                            {% endif %}
-                        </div>
-                    </div>
-
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <!--ORGANIC FOOD  products end -->
-
 
     <!-- SUNNAH ITEM products start -->
 
@@ -292,6 +258,51 @@
     </section>
 
     <!--SUNNAH ITEM products end -->
+
+    <!-- ORGANIC FOOD   products start -->
+    <section class="collection">
+        <div class="container py-5 wow fadeInUp" data-wow-duration="6s">
+            <h4 style="text-shadow: 1px 1px 0px #03afaa;"
+                class="section-header py-2 w-50 mx-auto text-center"> ORGANIC FOOD </h4>
+            <div class="row py-5 new-arrival-slick">
+                {% for product in organic_food_ins %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="single-card">
+                            <div class="card_img">
+                                <img src="{{ product.pro_img.url }}" class="" alt="">
+                            </div>
+                            <div class="card_content">
+                                <h4>{{ product.name }}</h4>
+
+                                {% if product.updated_price %}
+                                    <p><small>
+                                        <del>৳ {{ product.price }}</del>
+                                        <span>৳ {{ product.updated_price }}</span>
+                                    </small></p>
+                                {% else %}
+                                    <p><small>
+                                        <span>৳ {{ product.price }}</span>
+                                    </small></p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="single-card-hover">
+                            <button class="btn btn-primary single-card-hover-btn-1">
+                                <a style="text-decoration: none; color: #F8F9FA"
+                                   href="{% url 'product' %}?category=ORGANIC FOOD">See More</a></button>
+
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!--ORGANIC FOOD  products end -->
+
+
+
 
 
     <!---About Section=====-->

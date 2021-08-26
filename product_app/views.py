@@ -9,7 +9,7 @@ from django.core.paginator import Paginator
 # todo: render home page and showing few types of product and also slider images from backend.
 def home(request):
     # fetch all slider images from slide model
-    slider_ins = Slider.objects.all().order_by('-id')
+    slider_ins = Slider.objects.all().order_by('id')
     # fetch all products instances from product model
     product_ins = Product.objects.all().order_by('-id')
     upcoming_prdct_ins = Product.objects.filter(category='UPCOMING PRODUCTS').order_by('-id')[:8]
