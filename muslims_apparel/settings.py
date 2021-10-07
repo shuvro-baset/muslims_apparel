@@ -12,20 +12,36 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+env = environ.Env()
+# reading .env file
+base = environ.Path(__file__) - 2
+if os.path.exists(base(".env")):
+    environ.Env.read_env(base(".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7g0l_jtbgp17(cpia2qg)#2n_$(*r%i)h3_+6-a*uox+e1edn%'
+SECRET_KEY = env("SECRET_KEY")
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = env.bool("DEBUG", default=False)
+
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
+
+MODE = env.str('MODE', default='production')
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-7g0l_jtbgp17(cpia2qg)#2n_$(*r%i)h3_+6-a*uox+e1edn%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -73,13 +89,13 @@ WSGI_APPLICATION = 'muslims_apparel.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES = {"default": env.db()}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
