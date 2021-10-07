@@ -119,6 +119,7 @@ html, body {
     width: 270px;
     margin-bottom: 25px;
     border-radius: 5px;
+    height: 350px;
 }
 
 .card_content {
@@ -157,7 +158,7 @@ html, body {
     left: 16px;
     top: 0;
     content: '';
-    height: 78.5%;
+    height: 350px;
     width: 269px;
     border-radius: 5px;
     background: #000000a3;

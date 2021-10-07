@@ -15,7 +15,7 @@
                 {% for product in products %}
                     <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="card">
-                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" alt="">
+                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" style="height: 350px" alt="">
                             <input type="button" value="Buy Now">
                             <a href="{% url 'single_product' product.id %}"><input type="button" value="product details"></a>
                             {% if product.updated_price %}

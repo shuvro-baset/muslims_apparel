@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import *
 # import paginator classes
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
 
 
 
@@ -43,8 +43,10 @@ class ProductView(TemplateView):
         # appending another value into context data
         context['category'] = category
 
-        paginator = Paginator(context['products'], 2)  # Show 25 contacts per page.
-        page_number = self.request.GET.get("page")
+        paginator = Paginator(context['products'], 2) # Show 25 contacts per page.
+        # print(paginator)
+        page_number = self.request.GET.get("page", 1)
+        print("page Number: ",page_number)
         page_obj = paginator.get_page(page_number)
 
         context['page_obj'] = page_obj
