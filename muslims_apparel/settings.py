@@ -138,8 +138,12 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+if MODE == 'local':
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+elif MODE == 'production':  # below 3 line would be not use
+    STATIC_ROOT = '/home/' + env.str('USERNAME') + '/public_html/static'
+    MEDIA_ROOT = '/home/' + env.str('USERNAME') + '/public_html/media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
