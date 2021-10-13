@@ -21,24 +21,24 @@ html, body {
 .navbar-light .navbar-brand {
     font-size: 35px;
     font-weight: bold;
-    color: #0a0280;
+    color: #000;
     font-family: 'Lobster', cursive;
 }
 
 .navbar-light .navbar-brand:hover {
-    color: #7D2A80;
+    color: #2a2a65;
 }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-    color: #0a0280;
+    color: #000;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #0a0280;
+    color: #000;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: #7D2A80;
+    color: #2a2a65;
 }
 
 .navbar .nav-link {
@@ -49,7 +49,7 @@ html, body {
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-    color: #af75ea;
+    color: #2a2a65;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -60,7 +60,7 @@ html, body {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #0a0280;
+    color: #000;
 }
 
 .navbar-toggler {
@@ -75,13 +75,13 @@ html, body {
     display: inline-block;
     font-size: 32px;
     margin-bottom: 16px;
-    color: #af75ea;
+    color: #2a2a65;
     padding: 8px 16px;
 }
 
 .section-header {
     border: 10px solid;
-    border-image: linear-gradient(180deg, rgb(44, 185, 241), rgb(0, 4, 255));
+    border-image: linear-gradient(180deg, rgb(62, 82, 203), rgb(2, 6, 38));
     border-image-slice: 1;
     color: #2a2a65;
     font-weight: 700;
@@ -104,7 +104,7 @@ html, body {
 /*new arrival start*/
 
 .collection span {
-    color: #0a0280;
+    color: #000;
     font-size: 19px;
     font-weight: 700;
     padding-left: 5px;
@@ -136,12 +136,12 @@ html, body {
 
 .slick-dots li button:before {
     font-size: 40px;
-    color: #0a0280;
+    color: #000;
 }
 
 .slick-dots li.slick-active button:before {
     opacity: .75;
-    color: #0a0280;
+    color: #000;
 }
 
 .slider-left, .slider-right {
@@ -192,7 +192,7 @@ button.btn.btn-info.single-card-hover-btn-2 {
     opacity: 0;
     height: 45px;
     width: 110px;
-    background-color: #0a0280;
+    background-color: #000;
     color: #fff;
     border-radius: 5px;
     outline: none;
@@ -207,7 +207,7 @@ button.btn.btn-info.single-card-hover-btn-2 {
 }
 
 .collection input:hover {
-    background-color: #0a0280;
+    background-color: #000;
     transition: 0.5s;
 }
 
@@ -217,7 +217,7 @@ button.btn.btn-info.single-card-hover-btn-2 {
 .slick-prev::before, .slick-next::before {
     font-size: 30px;
     opacity: 1;
-    color: #0a0280;
+    color: #000;
 }
 
 .slick-prev {
@@ -281,7 +281,7 @@ button.btn.btn-info.single-card-hover-2-btn-2 {
 /*    border-image-slice: 1;*/
 /*}*/
 .about-text p {
-    border: 1px solid #0a0280;
+    border: 1px solid #000;
     border-radius: 15px;
     color: black;
     transition: width 1s, height 1s, transform 3s;
@@ -289,7 +289,7 @@ button.btn.btn-info.single-card-hover-2-btn-2 {
 }
 
 .about-text p:hover {
-    background-color: #0a0280;
+    background-color: #000;
     color: white;
     transform: scale(0.9);
 
@@ -318,7 +318,7 @@ button.btn.btn-info.single-card-hover-2-btn-2 {
     margin: 0 20px;
     height: 60px;
     width: 60px;
-    background-color: #0a0280;
+    background-color: #000;
     color: #ffffff;
     box-shadow: 0px 10px 10px rgba(0, 0, 0.1);
     border-radius: 50px;
