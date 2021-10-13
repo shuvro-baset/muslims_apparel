@@ -1,0 +1,11 @@
+DEBUG=True
+MODE=production
+SECRET_KEY=cd*ak)zg&%n0tif@_84su(lccor7lo@7mcjxgq=x*h=)4x&k+s
+ALLOWED_HOSTS=*
+DATABASE_URL=mysql://muslimsapparelbd_muslimsapparel_imran:ImranSathi@localhost:3306/muslimsapparelbd_muslims_db
+#EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+#EMAIL_HOST=
+#EMAIL_HOST_USER=o
+#EMAIL_HOST_PASSWORD=
+#EMAIL_PORT=26
+USERNAME=muslimsapparelbd
