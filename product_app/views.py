@@ -62,3 +62,7 @@ class SinglepProductView(TemplateView):
         # filtering product using product id
         context['product'] = Product.objects.filter(id=product_id).first()
         return context
+
+
+def privacy(request):
+    return render(request, 'privacy.html')
