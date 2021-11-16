@@ -4,8 +4,6 @@ from .models import *
 # import paginator classes
 from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
 
-
-
 # todo: render home page and showing few types of product and also slider images from backend.
 def home(request):
     # fetch all slider images from slide model
@@ -50,7 +48,6 @@ class ProductView(TemplateView):
         page_obj = paginator.get_page(page_number)
 
         context['page_obj'] = page_obj
-
         return context
 
 # todo: single product view
@@ -63,6 +60,6 @@ class SinglepProductView(TemplateView):
         context['product'] = Product.objects.filter(id=product_id).first()
         return context
 
-
+# privacy page
 def privacy(request):
     return render(request, 'privacy.html')
