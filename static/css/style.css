@@ -380,15 +380,3 @@ footer a {
 
 
 /*footer end*/
-.fb-customerchat iframe {
-    pointer-events: none;
-}
-
-iframe.fb_customer_chat_bounce_in {
-    pointer-events: inherit;
-}
-
-iframe.fb_customer_chat_bounce_out {
-    pointer-events: none;
-}
-.fb_customer_chat_bubble_pop_in {top:20px!important}
