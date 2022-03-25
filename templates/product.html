@@ -1,4 +1,4 @@
-{% extends 'main2.html' %}
+{% extends 'main.html' %}
 
 {% load static %}
 
@@ -6,18 +6,23 @@
 
     <!-- product start -->
 
-    <section class="collection all-product">
-        <div class="container">
+    <div class="container">
+        <div class="row my-5">
+            <div class="text-center">
+                <span class="product-title">{{ category }}</span>
+            </div>
+        </div>
 
-            <h4 class="section-header text-center product-header">{{ category }}</h4>
-            <div class="row">
-
-                {% for product in products %}
-                    <div class="single-card col-lg-3 col-md-4 col-sm-6 col-12">
-                        <div class="card">
-                            <img src="{{ product.pro_img.url }}" class="img-fluid mb-3" style="height: 350px" alt="">
-                            <input type="button" value="Buy Now">
-                            <a href="{% url 'single_product' product.id %}"><input type="button" value="product details"></a>
+        <div class="custom-row mb-5">
+            {% for product in products %}
+                <div class="my-3 text-center">
+                    <div class="product-div">
+                        <div>
+                            <img style="width: 600; height: 600" src="{{ product.pro_img.url }}" class="img-fluid"
+                                 alt="">
+                        </div>
+                        <div class="my-3">
+                            <h6 class="title2">{{ product.name }}</h6>
                             {% if product.updated_price %}
                                 <p><small>
                                     <del>৳ {{ product.price }}</del>
@@ -28,34 +33,13 @@
                                     <span>৳ {{ product.price }}</span>
                                 </small></p>
                             {% endif %}
+                            <a href="{% url 'single_product' product.id %}"><input type="button"
+                                                                                   value="product details"></a>
                         </div>
                     </div>
-                {% endfor %}
-
-            </div>
+                </div>
+            {% endfor %}
         </div>
-    </section>
-
-    <!--product end -->
-{#<div class="pagination container">#}
-{#    <nav aria-label="Page navigation example">#}
-{#        <ul class="pagination ">#}
-{#            {% if page_obj.has_previous %}#}
-{#            <li class="page-item"><a href="?page=1" class="page-link first">&laquo; first</a></li>#}
-{#            <li class="page-item"><a href="?page={{ page_obj.previous_page_number }}" class="page-link previous">previous</a></li>#}
-{#            {% endif %}#}
-{##}
-{#            <li class="page-item">#}
-{#            <span class="page-link bg-dark">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>#}
-{#            </li>#}
-{##}
-{#            {% if page_obj.has_next %}#}
-{#                <li class="page-item"><a href="?page={{ page_obj.next_page_number }}" class="page-link">next</a></li>#}
-{#                <li class="page-item "><a href="?page={{ page_obj.paginator.num_pages }}" class="page-link bg-danger">last &raquo;</a></li>#}
-{#            {% endif %}#}
-{#        </ul>#}
-{#    </nav>#}
-{#</div>#}
-
+    </div>
 
 {% endblock %}
